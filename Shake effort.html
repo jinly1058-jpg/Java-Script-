@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+ <button id="btn">Click Me</button>
+
+<script>
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener("click", function() {
+    // Move left
+    btn.style.transform = "translateX(-5px)";
+
+    // Move right after 100ms
+    setTimeout(function() {
+      btn.style.transform = "translateX(5px)";
+    }, 100);
+
+    // Return to center after 200ms
+    setTimeout(function() {
+      btn.style.transform = "translateX(0)";
+    }, 200);
+  });
+</script>
+</body>
+</html>
